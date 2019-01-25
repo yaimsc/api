@@ -17,7 +17,7 @@ class HomeController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://jsonplaceholder.typicode.com/todos/1",
+            CURLOPT_URL => "https://jsonplaceholder.typicode.com/todos/",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
@@ -32,7 +32,12 @@ class HomeController extends Controller
           } else {
             $json = json_decode($response);
             dump($json);
+            for ($i=0; $i < 10; $i++) {
+              dump($json[$i]->title);
+            }
+
           }
+
     }
 
     /**
