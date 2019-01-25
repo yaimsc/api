@@ -35,9 +35,7 @@ class HomeController extends Controller
             for ($i=0; $i < 10; $i++) { //pasa sacar el length de todo el array de json sizeof($json)
               dump($json[$i]->title);
             }
-
           }
-
     }
 
     /**
