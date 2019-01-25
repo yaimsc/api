@@ -32,7 +32,7 @@ class HomeController extends Controller
           } else {
             $json = json_decode($response);
             dump($json);
-            for ($i=0; $i < 10; $i++) {
+            for ($i=0; $i < 10; $i++) { //pasa sacar el length de todo el array de json sizeof($json)
               dump($json[$i]->title);
             }
 
